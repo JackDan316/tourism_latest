@@ -19,7 +19,7 @@ import mlflow
 mlflow.set_tracking_uri("http://localhost:5000")
 mlflow.set_experiment("tourism")
 
-api = HfApi()
+api = HfApi(token=os.getenv("HF_TOKEN"))
 
 
 Xtrain_path = "hf://datasets/jackson-daniel/tourism/Xtrain.csv"
